@@ -23,6 +23,13 @@
     },
     "api-interfaces": {
       "tags": []
+    },
+    "neocratia": {
+      "tags": []
+    },
+    "neocratia-e2e": {
+      "tags": [],
+      "implicitDependencies": ["neocratia"]
     }
   }
 }
