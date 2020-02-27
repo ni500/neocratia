@@ -1,3 +1,4 @@
+import { VotesModule } from './../votes/votes.module';
 import { RouterModule } from '@angular/router';
 import { NgMaterialModule } from './../shared/ng-material.module';
 import { NgModule } from '@angular/core';
@@ -8,7 +9,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   declarations: [SideMenuComponent, HomeComponent, ToolbarComponent],
-  imports: [CommonModule, NgMaterialModule, RouterModule],
+  imports: [CommonModule, NgMaterialModule, RouterModule, VotesModule],
   exports: [ToolbarComponent, SideMenuComponent]
 })
 export class UiModule {}

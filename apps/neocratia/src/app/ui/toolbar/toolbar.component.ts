@@ -1,4 +1,6 @@
+import { AuthService } from './../../core/auth.service';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'neocratia-toolbar',
@@ -8,10 +10,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class ToolbarComponent {
   @Input() title: string;
   @Input() country: string;
-  @Output() logUser = new EventEmitter();
+  @Input() user: any;
+  @Output() logInUser = new EventEmitter();
+  @Output() logOutUser = new EventEmitter();
   @Output() toggleMenu = new EventEmitter();
-
-  login() {
-    this.logUser.emit('');
-  }
 }

@@ -19,7 +19,20 @@
       </p>
     </span>
     <span class="right-fixed">
-      <button mat-raised-button color="primary" (click)="login()">
+      <button
+        *ngIf="user"
+        mat-raised-button
+        color="primary"
+        (click)="logOutUser.emit()"
+      >
+        Cerrar Sesión
+      </button>
+      <button
+        *ngIf="!user"
+        mat-raised-button
+        color="primary"
+        (click)="logInUser.emit()"
+      >
         Iniciar sesión
       </button>
     </span>

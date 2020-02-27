@@ -1,13 +1,16 @@
 <mat-sidenav-container class="main-container">
   <mat-sidenav #sidenav mode="side">
-    <neocratia-side-menu></neocratia-side-menu>
+    <neocratia-side-menu [user]="user$ | async"></neocratia-side-menu>
   </mat-sidenav>
 
   <mat-sidenav-content>
     <neocratia-toolbar
       [title]="title"
       [country]="country"
+      [user]="user$ | async"
       (toggleMenu)="sidenav.toggle()"
+      (logInUser)="login()"
+      (logOutUser)="signOut()"
     ></neocratia-toolbar>
 
     <router-outlet></router-outlet>

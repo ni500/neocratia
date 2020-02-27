@@ -1,19 +1,17 @@
 <div class="menu-container ">
   <div class="user-card ">
-    <img src="/assets/logo-angular-honduras.svg" />
+    <img *ngIf="!user" src="/assets/logo-angular-honduras.svg" />
+    <p *ngIf="user">{{ user | json }}</p>
   </div>
   <mat-list>
+    <mat-list-item [routerLink]="['']">
+      Inicio
+    </mat-list-item>
     <mat-list-item
       [routerLink]="['/politicos']"
       routerLinkActive="router-link-active"
     >
       Politicos
-    </mat-list-item>
-    <mat-list-item
-      [routerLink]="['/activistas']"
-      routerLinkActive="router-link-active"
-    >
-      Activistas
     </mat-list-item>
     <mat-list-item
       [routerLink]="['/decisiones']"

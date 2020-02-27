@@ -1,3 +1,4 @@
+import { AuthService } from './core/auth.service';
 import { PoliticiansService } from './politicians/politicians.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UiModule } from './ui/ui.module';
@@ -25,7 +26,7 @@ import { AppRoutingModule } from './app-routing.module';
     NgMaterialModule,
     UiModule
   ],
-  providers: [PoliticiansService],
+  providers: [PoliticiansService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
