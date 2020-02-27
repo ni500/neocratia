@@ -10,5 +10,7 @@ export class PoliticiansListComponent implements OnInit {
   @Input() politicians: Politician[];
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.politicians);
+  }
 }

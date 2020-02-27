@@ -7,6 +7,7 @@ import { PoliticiansRoutingModule } from './politicians-routing.module';
 import { PoliticiansComponent } from './politicians.component';
 import { PoliticiansListComponent } from './politicians-list/politicians-list.component';
 import { PoliticianViewComponent } from './politician-view/politician-view.component';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,11 @@ import { PoliticianViewComponent } from './politician-view/politician-view.compo
     PoliticiansListComponent,
     PoliticianViewComponent
   ],
-  imports: [CommonModule, PoliticiansRoutingModule, NgMaterialModule],
-  providers: [PoliticiansService]
+  imports: [
+    CommonModule,
+    PoliticiansRoutingModule,
+    NgMaterialModule,
+    AngularFirestoreModule
+  ]
 })
 export class PoliticiansModule {}

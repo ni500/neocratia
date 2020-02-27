@@ -1,3 +1,4 @@
+import { PoliticiansService } from './politicians/politicians.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UiModule } from './ui/ui.module';
 import { NgMaterialModule } from './shared/ng-material.module';
@@ -18,13 +19,13 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule,
+    AngularFirestoreModule, // firestore
+    AngularFireAuthModule, // auth
     NgMaterialModule,
     UiModule
   ],
-  providers: [],
+  providers: [PoliticiansService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

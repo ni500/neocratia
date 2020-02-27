@@ -30,8 +30,13 @@ export class PoliticiansComponent implements OnInit {
   createPolitician() {
     const newPolitician = {
       id: new Date().getTime().toString(),
-      info: { name: 'Nombre 1', email: 'email@politico.com' }
+      info: { name: 'Nombre 1', email: 'email@politico.com' },
+      resume: '',
+      city: '',
+      yearsInCongress: 0,
+      userId: 'visitor'
     };
+    this.politiciansService.createPolitician(newPolitician);
     console.log(newPolitician);
   }
 }
