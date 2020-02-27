@@ -32,7 +32,7 @@ export class SetVoteComponent implements OnInit {
           return [decisions, politicians];
         })
       )
-      .subscribe(data => console.log(data));
+      .subscribe();
   }
 
   setVote() {
