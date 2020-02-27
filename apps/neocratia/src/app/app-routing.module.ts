@@ -11,6 +11,11 @@ const app_routes = [
       import('./politicians/politicians.module').then(m => m.PoliticiansModule)
   },
   {
+    path: 'decisiones',
+    loadChildren: () =>
+      import('./decisions/decisions.module').then(m => m.DecisionsModule)
+  },
+  {
     path: '**',
     redirectTo: '',
     pathMatch: 'full'

@@ -1,0 +1,33 @@
+<div style="padding: 2%;">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Agregar decisión</mat-card-title>
+      <mat-card-subtitle
+        >Ingresa los datos y da click en crear</mat-card-subtitle
+      >
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="decisionForm">
+        <div>
+          <mat-form-field style="padding: 2%;">
+            <mat-label>Título</mat-label>
+            <input matInput formControlName="title" />
+          </mat-form-field>
+          <mat-form-field style="padding: 2%;">
+            <mat-label>Descripción</mat-label>
+            <input matInput formControlName="description" />
+          </mat-form-field>
+          <mat-form-field style="padding: 2%;">
+            <mat-label>Fecha</mat-label>
+            <input matInput formControlName="date" />
+          </mat-form-field>
+        </div>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="createDecision()">
+        Crear Decisión
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
