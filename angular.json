@@ -101,6 +101,10 @@
             "passWithNoTests": true,
             "setupFile": "apps/neocratium/src/test-setup.ts"
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     },

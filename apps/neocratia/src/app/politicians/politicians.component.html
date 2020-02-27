@@ -1,7 +1,16 @@
-<neocratia-politicians-list></neocratia-politicians-list>
-
-<div *ngIf="(params$ | async)?.params?.id > ''">
-  <neocratia-politician-view></neocratia-politician-view>
+<div *ngIf="politicians$ | async as politicians; else noPoliticians">
+  <neocratia-politicians-list
+    (politicians)="(politicians)"
+  ></neocratia-politicians-list>
 </div>
 
-<!-- {{ params$ | async | json }} -->
+<ng-template #noPoliticians>
+  No hay políticos aún
+  <button mat-raised-button color="primary" (click)="createPolitician()">
+    Crear Político
+  </button>
+</ng-template>
+
+<div *ngIf="(params$ | async)?.params?.id > ''">
+
+</div>

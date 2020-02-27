@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "neocratia-ng-honduras"
+  },
+  "targets": {
+    "neocratia-ng-honduras": {
+      "hosting": {
+        "neocratium": [
+          "neocratia-ng-honduras"
+        ]
+      }
+    }
   }
 }

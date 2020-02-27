@@ -1,3 +1,5 @@
+import { PoliticiansService } from './politicians.service';
+import { NgMaterialModule } from './../shared/ng-material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -12,6 +14,7 @@ import { PoliticianViewComponent } from './politician-view/politician-view.compo
     PoliticiansListComponent,
     PoliticianViewComponent
   ],
-  imports: [CommonModule, PoliticiansRoutingModule]
+  imports: [CommonModule, PoliticiansRoutingModule, NgMaterialModule],
+  providers: [PoliticiansService]
 })
 export class PoliticiansModule {}

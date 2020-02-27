@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Politician } from '../politician.model';
 
 @Component({
   selector: 'neocratia-politicians-list',
@@ -6,10 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./politicians-list.component.scss']
 })
 export class PoliticiansListComponent implements OnInit {
+  @Input() politicians: Politician[];
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

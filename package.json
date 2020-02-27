@@ -7,6 +7,7 @@
     "nx": "nx",
     "start": "ng serve",
     "build": "ng build",
+    "build:functions": "cd functions && npm i && npm run build && cd ..",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
@@ -34,7 +35,7 @@
     "@angular/common": "9.0.0",
     "@angular/compiler": "9.0.0",
     "@angular/core": "9.0.0",
-    "@angular/fire": "^5.4.2",
+    "@angular/fire": "^6.0.0-rc.1",
     "@angular/forms": "9.0.0",
     "@angular/material": "^9.0.1",
     "@angular/platform-browser": "9.0.0",
@@ -45,10 +46,10 @@
     "@nestjs/platform-express": "^6.8.3",
     "@nrwl/angular": "9.0.1",
     "core-js": "^2.5.4",
+    "firebase": ">= 5.5.7 <8",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.5.0",
-    "zone.js": "^0.10.2",
-    "firebase": ">= 5.5.7 <8"
+    "zone.js": "^0.10.2"
   },
   "devDependencies": {
     "@angular/cli": "9.0.1",
