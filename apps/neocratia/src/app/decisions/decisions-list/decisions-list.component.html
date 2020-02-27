@@ -1,5 +1,8 @@
+<neocratia-create-decision></neocratia-create-decision>
+
+<h2 style="padding: 2%">Lista de decisiones 📝</h2>
 <div *ngIf="decisions$ | async as decisions">
-  <div *ngFor="let decision of decisions">
+  <div *ngFor="let decision of decisions" style="padding: 2%">
     <mat-card>
       <mat-card-header>
         <mat-card-title>{{ decision.title }}</mat-card-title>
@@ -13,5 +16,3 @@
     </mat-card>
   </div>
 </div>
-
-<neocratia-create-decision></neocratia-create-decision>
