@@ -26,7 +26,7 @@ export class PoliticiansComponent implements OnInit {
   ngOnInit(): void {
     this.params$ = this.activatedRoute.paramMap.pipe(
       map((params: any) => {
-        this.politiciansService.selectedPolitician.next(params.params.id);
+        this.politiciansService.setPolitician(params.params.id);
         return params;
       })
     );
