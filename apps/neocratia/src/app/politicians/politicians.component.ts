@@ -15,17 +15,21 @@ interface PoliticianParams {
 })
 export class PoliticiansComponent implements OnInit {
   params$: Observable<any>;
-  politicians$: Observable<Politician[]>;
+  politicians$ = this.politiciansService.politicians$;
+  politician$ = this.politiciansService.politician$;
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private politiciansService: PoliticiansService
   ) {}
 
   ngOnInit(): void {
-    this.params$ = this.activatedRoute.paramMap.pipe(map(params => params));
-    this.politicians$ = this.politiciansService.politicians$ as Observable<
-      Politician[]
-    >;
+    this.params$ = this.activatedRoute.paramMap.pipe(
+      map((params: any) => {
+        this.politiciansService.selectedPolitician.next(params.params.id);
+        return params;
+      })
+    );
   }
   createPolitician(newPolitician: Politician) {
     this.politiciansService.createPolitician(newPolitician);

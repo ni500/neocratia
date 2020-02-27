@@ -1,3 +1,4 @@
+import { VotesModule } from './../votes/votes.module';
 import { PoliticiansService } from './politicians.service';
 import { NgMaterialModule } from './../shared/ng-material.module';
 import { NgModule } from '@angular/core';
@@ -24,7 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NgMaterialModule,
     AngularFirestoreModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    VotesModule
   ]
 })
 export class PoliticiansModule {}

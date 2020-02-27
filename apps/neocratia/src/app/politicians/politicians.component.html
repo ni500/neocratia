@@ -3,6 +3,7 @@
     <a [routerLink]="['', 'politicos']">Cerrar</a>
     <neocratia-politician-view
       [id]="params.params.id"
+      [politician]="politician$ | async"
     ></neocratia-politician-view>
   </div>
 </div>
