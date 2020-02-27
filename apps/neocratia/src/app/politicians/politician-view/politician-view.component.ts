@@ -8,4 +8,5 @@ import { Politician } from '../politician.model';
 })
 export class PoliticianViewComponent {
   @Input() politician: Politician;
+  @Input() id: string;
 }

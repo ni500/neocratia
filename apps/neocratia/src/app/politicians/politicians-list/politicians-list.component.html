@@ -2,9 +2,11 @@
   <mat-card>
     <mat-card-header>
       <mat-card-title>{{ politician.info?.name }}</mat-card-title>
-      <mat-card-subtitle>subtitle</mat-card-subtitle>
+      <mat-card-subtitle>{{ politician.info?.email }}</mat-card-subtitle>
     </mat-card-header>
-    <mat-card-content> </mat-card-content>
+    <mat-card-content>
+      <p>{{ politician.resume }}</p>
+    </mat-card-content>
     <mat-card-actions>
       <button [routerLink]="politician.id">Ver</button>
     </mat-card-actions>

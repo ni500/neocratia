@@ -1,21 +1,25 @@
-<div *ngIf="politicians$ | async as politicians; else noPoliticians">
-  <neocratia-politicians-list
-    [politicians]="politicians"
-  ></neocratia-politicians-list>
-  <button mat-raised-button color="primary" (click)="createPolitician()">
-    Crear Político
-  </button>
-</div>
-
-<ng-template #noPoliticians>
-  <div>
-    <h2>No hay políticos aún</h2>
-    <button mat-raised-button color="primary" (click)="createPolitician()">
-      Crear Político
-    </button>
-  </div>
-</ng-template>
-
 <div *ngIf="params$ | async as params">
-  {{ params.params.id }}
+  <div *ngIf="params.params.id > ''; else generalView">
+    <a [routerLink]="['', 'politicos']">Cerrar</a>
+    <neocratia-politician-view
+      [id]="params.params.id"
+    ></neocratia-politician-view>
+  </div>
 </div>
+
+<ng-template #generalView>
+  <div *ngIf="politicians$ | async as politicians; else noPoliticians">
+    <neocratia-politicians-list
+      [politicians]="politicians"
+    ></neocratia-politicians-list>
+    <neocratia-create-politician
+      (createPolitician)="createPolitician($event)"
+    ></neocratia-create-politician>
+  </div>
+
+  <ng-template #noPoliticians>
+    <div>
+      <h2>No hay políticos aún</h2>
+    </div>
+  </ng-template>
+</ng-template>
