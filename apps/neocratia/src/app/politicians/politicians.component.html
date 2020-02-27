@@ -1,0 +1,7 @@
+<neocratia-politicians-list></neocratia-politicians-list>
+
+<div *ngIf="(params$ | async)?.params?.id > ''">
+  <neocratia-politician-view></neocratia-politician-view>
+</div>
+
+<!-- {{ params$ | async | json }} -->
