@@ -87,10 +87,7 @@
               "apps/neocratium/tsconfig.app.json",
               "apps/neocratium/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/neocratium/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/neocratium/**"]
           }
         },
         "test": {
@@ -129,13 +126,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/neocratium-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/neocratium-e2e/**"
-            ]
+            "tsConfig": ["apps/neocratium-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/neocratium-e2e/**"]
           }
         }
       }
@@ -153,9 +145,7 @@
             "outputPath": "dist/apps/api",
             "main": "apps/api/src/main.ts",
             "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": [
-              "apps/api/src/assets"
-            ]
+            "assets": ["apps/api/src/assets"]
           },
           "configurations": {
             "production": {
@@ -184,10 +174,7 @@
               "apps/api/tsconfig.app.json",
               "apps/api/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/api/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/api/**"]
           }
         },
         "test": {
@@ -213,10 +200,7 @@
               "libs/api-interfaces/tsconfig.lib.json",
               "libs/api-interfaces/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/api-interfaces/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/api-interfaces/**"]
           }
         },
         "test": {
@@ -251,11 +235,14 @@
             "aot": true,
             "assets": [
               "apps/neocratia/src/favicon.ico",
-              "apps/neocratia/src/assets"
+              "apps/neocratia/src/assets",
+              {
+                "glob": "**/*",
+                "input": "libs/theme/assets/",
+                "output": "/assets/"
+              }
             ],
-            "styles": [
-              "apps/neocratia/src/styles.scss"
-            ],
+            "styles": ["apps/neocratia/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -314,10 +301,7 @@
               "apps/neocratia/tsconfig.app.json",
               "apps/neocratia/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/neocratia/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/neocratia/**"]
           }
         },
         "test": {
@@ -352,13 +336,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/neocratia-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/neocratia-e2e/**"
-            ]
+            "tsConfig": ["apps/neocratia-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/neocratia-e2e/**"]
           }
         }
       }

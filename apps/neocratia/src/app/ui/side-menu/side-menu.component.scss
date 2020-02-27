@@ -15,9 +15,15 @@ mat-list-item {
 
 .user-card {
   width: auto;
-  height: 150px;
-  display: flex;
+  height: 200px;
+  display: block;
   align-items: center;
+  align-content: center;
   text-align: center;
-  background-color: gray;
+  background-color: #f2f2f2;
+}
+
+.logo-ng-honduras {
+  width: 200px;
+  height: auto;
 }
