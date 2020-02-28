@@ -7,7 +7,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/Auth';
 import { AngularFireModule } from '@angular/fire';
