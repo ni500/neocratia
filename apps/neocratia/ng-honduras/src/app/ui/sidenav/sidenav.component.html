@@ -1,6 +1,11 @@
 <div class="menu-container ">
   <div class="user-card">
-    <img class="logo-ng-honduras" src="/assets/logo-ng-honduras.png" />
+    <img
+      class="logo-ng-honduras"
+      *ngIf="!user"
+      src="/assets/logo-ng-honduras.png"
+    />
+    <p *ngIf="user">{{ user | json }}</p>
   </div>
   <mat-list>
     <mat-list-item [routerLink]="['']">

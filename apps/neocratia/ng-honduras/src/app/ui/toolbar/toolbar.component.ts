@@ -9,4 +9,8 @@ export class ToolbarComponent {
   @Input() title: string;
   @Input() country: string;
   @Output() sidenavToggle = new EventEmitter();
+  @Input() user: any;
+  @Output() logInUser = new EventEmitter();
+  @Output() logOutUser = new EventEmitter();
+  @Output() toggleMenu = new EventEmitter();
 }

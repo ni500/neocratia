@@ -12,21 +12,9 @@
   },
   "hosting": [
     {
-      "public": "dist/apps/neocratia",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ]
-    },
-    {
-      "target": "neocratium",
-      "public": "dist/apps/neocratium",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
+      "target": "neocratia-ng-honduras",
+      "public": "dist/apps/neocratia/ng-honduras",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "rewrites": [
         {
           "source": "**",

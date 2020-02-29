@@ -4,5 +4,23 @@
       <mat-icon>menu</mat-icon>
     </button>
     <span>{{ title | uppercase }}</span>
+    <span class="right-fixed">
+      <button
+        *ngIf="user"
+        mat-raised-button
+        color="primary"
+        (click)="logOutUser.emit()"
+      >
+        Cerrar Sesión
+      </button>
+      <button
+        *ngIf="!user"
+        mat-raised-button
+        color="primary"
+        (click)="logInUser.emit()"
+      >
+        Iniciar sesión
+      </button>
+    </span>
   </div>
 </mat-toolbar>
