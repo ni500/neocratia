@@ -1,0 +1,53 @@
+<div style="padding: 2%;">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Setear voto</mat-card-title>
+      <mat-card-subtitle
+        >Lleva el control de las decisiones que toman los servidores
+        públicos</mat-card-subtitle
+      >
+    </mat-card-header>
+    <mat-card-content>
+      <div fxLayout="row">
+        <mat-form-field style="padding: 2%;">
+          <mat-label>Político</mat-label>
+          <mat-select [(ngModel)]="selectedPolitician">
+            <mat-option
+              *ngFor="let politician of politicians"
+              [value]="politician"
+            >
+              {{ politician.info.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field style="padding: 2%;">
+          <mat-label>Decisión</mat-label>
+          <mat-select [(ngModel)]="selectedDecision">
+            <mat-option *ngFor="let decision of decisions" [value]="decision">
+              {{ decision.title }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div fxLayout="column">
+        <h4>Votó</h4>
+        <mat-radio-group
+          color="primary"
+          aria-label="Selecciona el voto realizado"
+          [(ngModel)]="vote"
+          fxLayout="row"
+          fxLayoutAlign="space-between"
+        >
+          <mat-radio-button value="yes">SI</mat-radio-button>
+          <mat-radio-button value="no">NO</mat-radio-button>
+          <mat-radio-button value="blank">BLANK</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="setVote()">
+        Guardar Voto
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -1,0 +1,27 @@
+<div class="menu-container ">
+  <div class="user-card">
+    <img
+      class="logo-ng-honduras"
+      *ngIf="!user"
+      src="/assets/logo-ng-honduras.png"
+    />
+    <p *ngIf="user">{{ user | json }}</p>
+  </div>
+  <mat-list>
+    <mat-list-item [routerLink]="['']">
+      INICIO
+    </mat-list-item>
+    <mat-list-item
+      [routerLink]="['/politicos']"
+      routerLinkActive="router-link-active"
+    >
+      POLITICOS
+    </mat-list-item>
+    <mat-list-item
+      [routerLink]="['/decisiones']"
+      routerLinkActive="router-link-active"
+    >
+      DECISIONES
+    </mat-list-item>
+  </mat-list>
+</div>

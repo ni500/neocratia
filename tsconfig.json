@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@neocratia/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@neocratia/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@neocratia/shared/themes": ["libs/shared/themes/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

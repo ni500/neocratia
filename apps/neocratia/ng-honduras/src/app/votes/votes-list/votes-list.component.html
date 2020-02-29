@@ -1,0 +1,10 @@
+<div style="padding: 2%">
+  <div *ngIf="(politicianVotes$ | async)?.length; else noVotes">
+    <div *ngFor="let vote of politicianVotes$ | async">
+      {{ vote | json }}
+    </div>
+  </div>
+  <ng-template #noVotes>
+    <h3>No ha votado nunca. ¡Trabaje Vago!</h3>
+  </ng-template>
+</div>
