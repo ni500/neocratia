@@ -8,5 +8,10 @@
     <mat-card-content>
       <p>{{ politician.info.resume }}</p>
     </mat-card-content>
+    <mat-card-actions>
+      <button mat-stroked-button color="primary" [routerLink]="politician.id">
+        Ver
+      </button>
+    </mat-card-actions>
   </mat-card>
 </div>

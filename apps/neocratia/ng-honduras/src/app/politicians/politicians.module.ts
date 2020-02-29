@@ -1,3 +1,4 @@
+import { VotesModule } from './../votes/votes.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
@@ -28,7 +29,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     NgMaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    VotesModule
   ]
 })
 export class PoliticiansModule {}

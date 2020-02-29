@@ -1,4 +1,4 @@
-import { switchMap, map } from 'rxjs/operators';
+import { switchMap, map, catchError } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import 'firebase/firestore';
 import { AngularFirestore } from '@angular/fire/firestore';
@@ -18,6 +18,7 @@ export class VotesService {
   selectedPoliticianId$ = this.selectedPolitician.asObservable();
   politiciansVotes$ = this.selectedPoliticianId$.pipe(
     switchMap((id: string) => {
+      console.log(id);
       if (id > '')
         return this.afs
           .collection('votes', ref => ref.where('politicianId', '==', id))
@@ -25,9 +26,12 @@ export class VotesService {
           .pipe(
             map(votes => {
               if (votes.length) return votes;
-              else return { message: 'No Votes' };
+              else return { message: 'No Votes', length: 0 };
             })
           );
+    }),
+    catchError(() => {
+      return of('NO HAY VOTOS');
     })
   );
 

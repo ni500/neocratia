@@ -16,7 +16,6 @@ export class PoliticiansService {
 
   selectedPolitician = new BehaviorSubject('');
   selectedPoliticianId$ = this.selectedPolitician.asObservable();
-
   politician$ = this.selectedPoliticianId$.pipe(
     switchMap((id: string) => {
       if (id > '')
