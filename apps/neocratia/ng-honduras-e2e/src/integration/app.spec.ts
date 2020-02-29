@@ -1,6 +1,6 @@
 import { getGreeting } from '../support/app.po';
 
-describe('neocratia', () => {
+describe('neocratia-ng-honduras', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {
@@ -8,6 +8,6 @@ describe('neocratia', () => {
     cy.login('my-email@something.com', 'myPassword');
 
     // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome to neocratia!');
+    getGreeting().contains('Welcome to neocratia-ng-honduras!');
   });
 });

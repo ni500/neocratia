@@ -1,7 +1,7 @@
 module.exports = {
-  name: 'neocratia',
-  preset: '../../jest.config.js',
-  coverageDirectory: '../../coverage/apps/neocratia',
+  name: 'neocratia-neocratia',
+  preset: '../../../jest.config.js',
+  coverageDirectory: '../../../coverage/apps/neocratia/neocratia',
   snapshotSerializers: [
     'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
     'jest-preset-angular/build/AngularSnapshotSerializer.js',
