@@ -87,10 +87,7 @@
               "apps/neocratium/tsconfig.app.json",
               "apps/neocratium/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/neocratium/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/neocratium/**"]
           }
         },
         "test": {
@@ -129,13 +126,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/neocratium-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/neocratium-e2e/**"
-            ]
+            "tsConfig": ["apps/neocratium-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/neocratium-e2e/**"]
           }
         }
       }
@@ -153,9 +145,7 @@
             "outputPath": "dist/apps/api",
             "main": "apps/api/src/main.ts",
             "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": [
-              "apps/api/src/assets"
-            ]
+            "assets": ["apps/api/src/assets"]
           },
           "configurations": {
             "production": {
@@ -184,10 +174,7 @@
               "apps/api/tsconfig.app.json",
               "apps/api/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/api/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/api/**"]
           }
         },
         "test": {
@@ -213,10 +200,7 @@
               "libs/api-interfaces/tsconfig.lib.json",
               "libs/api-interfaces/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/api-interfaces/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/api-interfaces/**"]
           }
         },
         "test": {
@@ -319,10 +303,7 @@
               "apps/neocratia/ng-honduras/tsconfig.app.json",
               "apps/neocratia/ng-honduras/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/neocratia/ng-honduras/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/neocratia/ng-honduras/**"]
           }
         },
         "test": {
@@ -357,150 +338,10 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/neocratia/ng-honduras-e2e/tsconfig.e2e.json"
-            ],
+            "tsConfig": ["apps/neocratia/ng-honduras-e2e/tsconfig.e2e.json"],
             "exclude": [
               "**/node_modules/**",
               "!apps/neocratia/ng-honduras-e2e/**"
-            ]
-          }
-        }
-      }
-    },
-    "neocratia-neocratia": {
-      "projectType": "application",
-      "schematics": {
-        "@nrwl/angular:component": {
-          "style": "scss"
-        }
-      },
-      "root": "apps/neocratia/neocratia",
-      "sourceRoot": "apps/neocratia/neocratia/src",
-      "prefix": "neocratia",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/apps/neocratia/neocratia",
-            "index": "apps/neocratia/neocratia/src/index.html",
-            "main": "apps/neocratia/neocratia/src/main.ts",
-            "polyfills": "apps/neocratia/neocratia/src/polyfills.ts",
-            "tsConfig": "apps/neocratia/neocratia/tsconfig.app.json",
-            "aot": true,
-            "assets": [
-              "apps/neocratia/neocratia/src/favicon.ico",
-              "apps/neocratia/neocratia/src/assets",
-              {
-                "glob": "**/*",
-                "input": "libs/theme/assets/",
-                "output": "/assets/"
-              }
-            ],
-            "styles": [
-              "apps/neocratia/neocratia/src/styles.scss"
-            ],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/neocratia/neocratia/src/environments/environment.ts",
-                  "with": "apps/neocratia/neocratia/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "neocratia-neocratia:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "neocratia-neocratia:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "neocratia-neocratia:build"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "apps/neocratia/neocratia/tsconfig.app.json",
-              "apps/neocratia/neocratia/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/neocratia/neocratia/**"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "apps/neocratia/neocratia/jest.config.js",
-            "tsConfig": "apps/neocratia/neocratia/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "apps/neocratia/neocratia/src/test-setup.ts"
-          }
-        }
-      }
-    },
-    "neocratia-neocratia-e2e": {
-      "root": "apps/neocratia/neocratia-e2e",
-      "sourceRoot": "apps/neocratia/neocratia-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/neocratia/neocratia-e2e/cypress.json",
-            "tsConfig": "apps/neocratia/neocratia-e2e/tsconfig.e2e.json",
-            "devServerTarget": "neocratia-neocratia:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "neocratia-neocratia:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "apps/neocratia/neocratia-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/neocratia/neocratia-e2e/**"
             ]
           }
         }
