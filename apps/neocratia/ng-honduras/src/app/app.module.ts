@@ -1,3 +1,6 @@
+import { AngularFireAuthModule } from '@angular/fire/Auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HomeComponent } from './ui/home/home.component';
 import { NgModule } from '@angular/core';
@@ -7,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NgMaterialModule } from './shared/ng-material.module';
 import { UiModule } from './ui/ui.module';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
@@ -36,7 +40,10 @@ import { UiModule } from './ui/ui.module';
     BrowserAnimationsModule,
     NgMaterialModule,
     UiModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule, // firestore
+    AngularFireAuthModule // auth
   ],
   providers: [],
   bootstrap: [AppComponent]

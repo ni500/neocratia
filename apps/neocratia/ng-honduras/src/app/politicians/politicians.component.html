@@ -1,1 +1,14 @@
-<p>politicians works!</p>
+<div *ngIf="politicians$ | async as politicians; else noPoliticians">
+  <neocratia-create-politician
+    (createPolitician)="createPolitician($event)"
+  ></neocratia-create-politician>
+  <neocratia-politicians-list
+    [politicians]="politicians"
+  ></neocratia-politicians-list>
+</div>
+
+<ng-template #noPoliticians>
+  <div>
+    <h2>No hay políticos aún</h2>
+  </div>
+</ng-template>

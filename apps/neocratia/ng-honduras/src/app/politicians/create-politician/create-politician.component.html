@@ -1,0 +1,45 @@
+<div style="padding: 2%;">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Agregar político</mat-card-title>
+      <mat-card-subtitle
+        >Ingresa los datos y da click en crear</mat-card-subtitle
+      >
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="politicianForm">
+        <div>
+          <mat-form-field style="padding: 2%;">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="name" />
+          </mat-form-field>
+          <mat-form-field style="padding: 2%;">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" />
+          </mat-form-field>
+          <mat-form-field style="padding: 2%;">
+            <mat-label>Años en el congreso</mat-label>
+            <input matInput formControlName="yearsInCongress" />
+          </mat-form-field>
+          <mat-form-field style="padding: 2%;">
+            <mat-label>Resumen</mat-label>
+            <input matInput formControlName="resume" />
+          </mat-form-field>
+          <mat-form-field style="padding: 2%;">
+            <mat-label>Ciudad</mat-label>
+            <input matInput formControlName="city" />
+          </mat-form-field>
+        </div>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="createPolitician.emit(newPolitician)"
+      >
+        Crear Político
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
