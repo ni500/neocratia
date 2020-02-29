@@ -13,7 +13,7 @@ jobs:
       run: npm install
     - name: Check lint
       run: npm run lint
-    - name: Intsall dependencies
+    - name: Add more actions soon
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
