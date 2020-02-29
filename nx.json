@@ -27,16 +27,12 @@
     "neocratia-ng-honduras": {
       "tags": []
     },
-    "neocratia/ng-honduras-e2e": {
+    "neocratia-ng-honduras-e2e": {
       "tags": [],
       "implicitDependencies": ["neocratia-ng-honduras"]
     },
-    "neocratia-neocratia": {
+    "shared-themes": {
       "tags": []
-    },
-    "neocratia-neocratia-e2e": {
-      "tags": [],
-      "implicitDependencies": ["neocratia-neocratia"]
     }
   }
 }
