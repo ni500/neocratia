@@ -9,9 +9,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Intsall dependencies
+      run: npm install
     - name: Check lint
       run: npm run lint
-    - name: Run a multi-line script
+    - name: Intsall dependencies
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
