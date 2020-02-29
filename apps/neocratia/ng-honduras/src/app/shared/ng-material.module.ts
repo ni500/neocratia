@@ -12,6 +12,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatOptionModule } from '@angular/material/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 const materialModules = [
   MatSidenavModule,
@@ -28,9 +29,11 @@ const materialModules = [
   MatRadioModule
 ];
 
+const commonModules = [FlexLayoutModule];
+
 @NgModule({
   declarations: [],
-  imports: [CommonModule, materialModules],
-  exports: [materialModules]
+  imports: [CommonModule, materialModules, commonModules],
+  exports: [materialModules, commonModules]
 })
 export class NgMaterialModule {}

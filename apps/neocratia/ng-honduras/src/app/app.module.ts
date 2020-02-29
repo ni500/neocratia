@@ -1,7 +1,6 @@
 import { AngularFireAuthModule } from '@angular/fire/Auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { HomeComponent } from './ui/home/home.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -40,7 +39,6 @@ import { environment } from '../environments/environment';
     BrowserAnimationsModule,
     NgMaterialModule,
     UiModule,
-    FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule, // firestore
     AngularFireAuthModule // auth
