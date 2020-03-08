@@ -1,0 +1,40 @@
+<div class="menu-container ">
+  <mat-toolbar>Menu</mat-toolbar>
+  <div class="user-card" *ngIf="!user">
+    <img class="logo-sidenav" *ngIf="!user" src="/assets/logo-sidenav.png" />
+    <button mat-raised-button class="full-width" color="primary">
+      Iniciar Sesión
+    </button>
+  </div>
+
+  <div class="user-card" *ngIf="user">
+    <p *ngIf="user">{{ user | json }}</p>
+  </div>
+  <mat-list>
+    <mat-list-item *ngFor="let item of menuItems" [routerLink]="item.link">
+      {{ item.name }}
+    </mat-list-item>
+    <!-- <mat-list-item [routerLink]="['']">
+      INICIO
+    </mat-list-item>
+    <mat-list-item
+      [routerLink]="['/colombia-feature-politicos']"
+      routerLinkActive="router-link-active"
+    >
+      POLITICOS
+    </mat-list-item>
+    <mat-list-item
+      [routerLink]="['/decisiones']"
+      routerLinkActive="router-link-active"
+    >
+      DECISIONES
+    </mat-list-item> -->
+  </mat-list>
+</div>
+
+<!-- <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/colombia-feature-politicos">Políticos</a>
+      <a mat-list-item routerLink="/">Login</a>
+      <a mat-list-item href="#">Inicio</a>
+    </mat-nav-list> -->

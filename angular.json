@@ -551,6 +551,70 @@
           "styleext": "scss"
         }
       }
+    },
+    "colombia-feature-shell": {
+      "projectType": "library",
+      "root": "libs/colombia/feature-shell",
+      "sourceRoot": "libs/colombia/feature-shell/src",
+      "prefix": "neocratia",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/colombia/feature-shell/tsconfig.lib.json",
+              "libs/colombia/feature-shell/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/colombia/feature-shell/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/colombia/feature-shell/jest.config.js",
+            "tsConfig": "libs/colombia/feature-shell/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/colombia/feature-shell/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "colombia-feature-politicos": {
+      "projectType": "library",
+      "root": "libs/colombia/feature-politicos",
+      "sourceRoot": "libs/colombia/feature-politicos/src",
+      "prefix": "neocratia",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/colombia/feature-politicos/tsconfig.lib.json",
+              "libs/colombia/feature-politicos/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/colombia/feature-politicos/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/colombia/feature-politicos/jest.config.js",
+            "tsConfig": "libs/colombia/feature-politicos/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/colombia/feature-politicos/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

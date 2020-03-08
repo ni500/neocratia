@@ -1,0 +1,19 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <neocratia-sidenav [menuItems]="menuItems"></neocratia-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <neocratia-toolbar
+      [title]="'Title'"
+      (sidenavToggle)="drawer.toggle()"
+    ></neocratia-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

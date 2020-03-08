@@ -18,7 +18,13 @@
     "paths": {
       "@neocratia/api-interfaces": ["libs/api-interfaces/src/index.ts"],
       "@neocratia/shared/themes": ["libs/shared/themes/src/index.ts"],
-      "@neocratia/shared/ui-main-nav": ["libs/shared/ui-main-nav/src/index.ts"]
+      "@neocratia/shared/ui-main-nav": ["libs/shared/ui-main-nav/src/index.ts"],
+      "@neocratia/colombia/feature-shell": [
+        "libs/colombia/feature-shell/src/index.ts"
+      ],
+      "@neocratia/colombia/feature-politicos": [
+        "libs/colombia/feature-politicos/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

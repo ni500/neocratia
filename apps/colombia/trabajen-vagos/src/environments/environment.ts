@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: 'AIzaSyBuLkNAtjO68nfy4pPgjWz6mYNQR3fMjNQ',
+    authDomain: 'neocratia-col-dev.firebaseapp.com',
+    databaseURL: 'https://neocratia-col-dev.firebaseio.com',
+    projectId: 'neocratia-col-dev',
+    storageBucket: 'neocratia-col-dev.appspot.com',
+    messagingSenderId: '889614190929',
+    appId: '1:889614190929:web:4fe748314500b8c94beb70',
+    measurementId: 'G-9FPK3EYCQJ'
+  }
 };
 
 /*

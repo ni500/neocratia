@@ -43,6 +43,12 @@
     },
     "shared-ui-main-nav": {
       "tags": []
+    },
+    "colombia-feature-shell": {
+      "tags": []
+    },
+    "colombia-feature-politicos": {
+      "tags": []
     }
   }
 }
