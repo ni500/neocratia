@@ -40,6 +40,9 @@
     "colombia-trabajen-vagos-e2e": {
       "tags": [],
       "implicitDependencies": ["colombia-trabajen-vagos"]
+    },
+    "shared-ui-main-nav": {
+      "tags": []
     }
   }
 }

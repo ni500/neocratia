@@ -519,6 +519,38 @@
           }
         }
       }
+    },
+    "shared-ui-main-nav": {
+      "projectType": "library",
+      "root": "libs/shared/ui-main-nav",
+      "sourceRoot": "libs/shared/ui-main-nav/src",
+      "prefix": "neocratia",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/ui-main-nav/tsconfig.lib.json",
+              "libs/shared/ui-main-nav/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/ui-main-nav/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/ui-main-nav/jest.config.js",
+            "tsConfig": "libs/shared/ui-main-nav/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/shared/ui-main-nav/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {
