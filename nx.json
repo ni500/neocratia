@@ -33,6 +33,13 @@
     },
     "shared-themes": {
       "tags": []
+    },
+    "colombia-trabajen-vagos": {
+      "tags": []
+    },
+    "colombia-trabajen-vagos-e2e": {
+      "tags": [],
+      "implicitDependencies": ["colombia-trabajen-vagos"]
     }
   }
 }

@@ -390,6 +390,135 @@
           "styleext": "scss"
         }
       }
+    },
+    "colombia-trabajen-vagos": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/colombia/trabajen-vagos",
+      "sourceRoot": "apps/colombia/trabajen-vagos/src",
+      "prefix": "neocratia",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/colombia/trabajen-vagos",
+            "index": "apps/colombia/trabajen-vagos/src/index.html",
+            "main": "apps/colombia/trabajen-vagos/src/main.ts",
+            "polyfills": "apps/colombia/trabajen-vagos/src/polyfills.ts",
+            "tsConfig": "apps/colombia/trabajen-vagos/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/colombia/trabajen-vagos/src/favicon.ico",
+              "apps/colombia/trabajen-vagos/src/assets"
+            ],
+            "styles": ["apps/colombia/trabajen-vagos/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/colombia/trabajen-vagos/src/environments/environment.ts",
+                  "with": "apps/colombia/trabajen-vagos/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "colombia-trabajen-vagos:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "colombia-trabajen-vagos:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "colombia-trabajen-vagos:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/colombia/trabajen-vagos/tsconfig.app.json",
+              "apps/colombia/trabajen-vagos/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/colombia/trabajen-vagos/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/colombia/trabajen-vagos/jest.config.js",
+            "tsConfig": "apps/colombia/trabajen-vagos/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/colombia/trabajen-vagos/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "colombia-trabajen-vagos-e2e": {
+      "root": "apps/colombia/trabajen-vagos-e2e",
+      "sourceRoot": "apps/colombia/trabajen-vagos-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/colombia/trabajen-vagos-e2e/cypress.json",
+            "tsConfig": "apps/colombia/trabajen-vagos-e2e/tsconfig.e2e.json",
+            "devServerTarget": "colombia-trabajen-vagos:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "colombia-trabajen-vagos:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/colombia/trabajen-vagos-e2e/tsconfig.e2e.json"],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/colombia/trabajen-vagos-e2e/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
