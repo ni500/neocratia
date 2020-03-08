@@ -419,6 +419,14 @@
             "scripts": []
           },
           "configurations": {
+            "qa": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/colombia/trabajen-vagos/src/environments/environment.ts",
+                  "with": "apps/colombia/trabajen-vagos/src/environments/environment.staging.ts"
+                }
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -597,7 +605,10 @@
               "libs/colombia/feature-politicos/tsconfig.lib.json",
               "libs/colombia/feature-politicos/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/colombia/feature-politicos/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/colombia/feature-politicos/**"
+            ]
           }
         },
         "test": {

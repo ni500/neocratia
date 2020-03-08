@@ -21,6 +21,28 @@
           "destination": "/index.html"
         }
       ]
+    },
+    {
+      "target": "colombia-trabajen-vagos",
+      "public": "dist/apps/colombia/trabajen-vagos",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "target": "neocratium",
+      "public": "dist/apps/neocratium",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
     }
   ]
 }

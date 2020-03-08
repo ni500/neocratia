@@ -1,12 +1,39 @@
 {
   "projects": {
-    "default": "neocratia-ng-honduras"
+    "default": "neocratia-ng-honduras",
+    "col-dev": "neocratia-col-dev",
+    "col-qa": "neocratia-col-qa",
+    "col-prod": "neocratia-col-prod"
   },
   "targets": {
     "honduras-ng-honduras": {
       "hosting": {
         "neocratia-ng-honduras": [
           "neocratia-ng-honduras"
+        ]
+      }
+    },
+    "neocratia-col-dev": {
+      "hosting": {
+        "colombia-trabajen-vagos": [
+          "trabajen-vagos-dev"
+        ],
+        "neocratium": [
+          "neocratia-col-dev"
+        ]
+      }
+    },
+    "neocratia-col-qa": {
+      "hosting": {
+        "colombia-trabajen-vagos": [
+          "trabajen-vagos-qa"
+        ]
+      }
+    },
+    "neocratia-col-prod": {
+      "hosting": {
+        "colombia-trabajen-vagos": [
+          "trabajen-vagos-prod"
         ]
       }
     }
