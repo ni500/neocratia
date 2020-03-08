@@ -213,29 +213,29 @@
         }
       }
     },
-    "neocratia-ng-honduras": {
+    "honduras-ng-honduras": {
       "projectType": "application",
       "schematics": {
         "@nrwl/angular:component": {
           "style": "scss"
         }
       },
-      "root": "apps/neocratia/ng-honduras",
-      "sourceRoot": "apps/neocratia/ng-honduras/src",
-      "prefix": "neocratia",
+      "root": "apps/honduras/ng-honduras",
+      "sourceRoot": "apps/honduras/ng-honduras/src",
+      "prefix": "honduras",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/neocratia/ng-honduras",
-            "index": "apps/neocratia/ng-honduras/src/index.html",
-            "main": "apps/neocratia/ng-honduras/src/main.ts",
-            "polyfills": "apps/neocratia/ng-honduras/src/polyfills.ts",
-            "tsConfig": "apps/neocratia/ng-honduras/tsconfig.app.json",
+            "outputPath": "dist/apps/honduras/ng-honduras",
+            "index": "apps/honduras/ng-honduras/src/index.html",
+            "main": "apps/honduras/ng-honduras/src/main.ts",
+            "polyfills": "apps/honduras/ng-honduras/src/polyfills.ts",
+            "tsConfig": "apps/honduras/ng-honduras/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "apps/neocratia/ng-honduras/src/favicon.ico",
-              "apps/neocratia/ng-honduras/src/assets",
+              "apps/honduras/ng-honduras/src/favicon.ico",
+              "apps/honduras/ng-honduras/src/assets",
               {
                 "glob": "**/*",
                 "input": "libs/shared/themes/src/lib/assets/",
@@ -244,7 +244,7 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "apps/neocratia/ng-honduras/src/styles.scss"
+              "apps/honduras/ng-honduras/src/styles.scss"
             ],
             "scripts": []
           },
@@ -252,8 +252,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/neocratia/ng-honduras/src/environments/environment.ts",
-                  "with": "apps/neocratia/ng-honduras/src/environments/environment.prod.ts"
+                  "replace": "apps/honduras/ng-honduras/src/environments/environment.ts",
+                  "with": "apps/honduras/ng-honduras/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -282,66 +282,66 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "neocratia-ng-honduras:build"
+            "browserTarget": "honduras-ng-honduras:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "neocratia-ng-honduras:build:production"
+              "browserTarget": "honduras-ng-honduras:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "neocratia-ng-honduras:build"
+            "browserTarget": "honduras-ng-honduras:build"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "apps/neocratia/ng-honduras/tsconfig.app.json",
-              "apps/neocratia/ng-honduras/tsconfig.spec.json"
+              "apps/honduras/ng-honduras/tsconfig.app.json",
+              "apps/honduras/ng-honduras/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/neocratia/ng-honduras/**"]
+            "exclude": ["**/node_modules/**", "!apps/honduras/ng-honduras/**"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/neocratia/ng-honduras/jest.config.js",
-            "tsConfig": "apps/neocratia/ng-honduras/tsconfig.spec.json",
+            "jestConfig": "apps/honduras/ng-honduras/jest.config.js",
+            "tsConfig": "apps/honduras/ng-honduras/tsconfig.spec.json",
             "passWithNoTests": true,
-            "setupFile": "apps/neocratia/ng-honduras/src/test-setup.ts"
+            "setupFile": "apps/honduras/ng-honduras/src/test-setup.ts"
           }
         }
       }
     },
-    "neocratia-ng-honduras-e2e": {
-      "root": "apps/neocratia/ng-honduras-e2e",
-      "sourceRoot": "apps/neocratia/ng-honduras-e2e/src",
+    "honduras-ng-honduras-e2e": {
+      "root": "apps/honduras/ng-honduras-e2e",
+      "sourceRoot": "apps/honduras/ng-honduras-e2e/src",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/neocratia/ng-honduras-e2e/cypress.json",
-            "tsConfig": "apps/neocratia/ng-honduras-e2e/tsconfig.e2e.json",
-            "devServerTarget": "neocratia-ng-honduras:serve"
+            "cypressConfig": "apps/honduras/ng-honduras-e2e/cypress.json",
+            "tsConfig": "apps/honduras/ng-honduras-e2e/tsconfig.e2e.json",
+            "devServerTarget": "honduras-ng-honduras:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "neocratia-ng-honduras:serve:production"
+              "devServerTarget": "honduras-ng-honduras:serve:production"
             }
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/neocratia/ng-honduras-e2e/tsconfig.e2e.json"],
+            "tsConfig": ["apps/honduras/ng-honduras-e2e/tsconfig.e2e.json"],
             "exclude": [
               "**/node_modules/**",
-              "!apps/neocratia/ng-honduras-e2e/**"
+              "!apps/honduras/ng-honduras-e2e/**"
             ]
           }
         }

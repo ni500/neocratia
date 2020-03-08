@@ -24,12 +24,12 @@
     "api-interfaces": {
       "tags": []
     },
-    "neocratia-ng-honduras": {
+    "honduras-ng-honduras": {
       "tags": []
     },
-    "neocratia-ng-honduras-e2e": {
+    "honduras-ng-honduras-e2e": {
       "tags": [],
-      "implicitDependencies": ["neocratia-ng-honduras"]
+      "implicitDependencies": ["honduras-ng-honduras"]
     },
     "shared-themes": {
       "tags": []

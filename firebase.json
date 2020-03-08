@@ -12,8 +12,8 @@
   },
   "hosting": [
     {
-      "target": "neocratia-ng-honduras",
-      "public": "dist/apps/neocratia/ng-honduras",
+      "target": "honduras-ng-honduras",
+      "public": "dist/apps/honduras/ng-honduras",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "rewrites": [
         {

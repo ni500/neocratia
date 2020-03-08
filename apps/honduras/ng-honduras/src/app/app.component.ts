@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'neocratia-ng-honduras';
+  title = 'honduras-ng-honduras';
   user$: Observable<any>;
   login() {
     this.authService.googleLogin();

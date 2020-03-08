@@ -3,7 +3,7 @@
     "default": "neocratia-ng-honduras"
   },
   "targets": {
-    "neocratia-ng-honduras": {
+    "honduras-ng-honduras": {
       "hosting": {
         "neocratia-ng-honduras": [
           "neocratia-ng-honduras"
