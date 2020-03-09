@@ -5,14 +5,14 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyBuLkNAtjO68nfy4pPgjWz6mYNQR3fMjNQ",
-    authDomain: "neocratia-col-dev.firebaseapp.com",
-    databaseURL: "https://neocratia-col-dev.firebaseio.com",
-    projectId: "neocratia-col-dev",
-    storageBucket: "neocratia-col-dev.appspot.com",
-    messagingSenderId: "889614190929",
-    appId: "1:889614190929:web:ede0b2b50bcd74e34beb70",
-    measurementId: "G-BCT14FBXFL"
+    apiKey: 'AIzaSyCvsV5x_L1T3SJq3NZWWVtUGLbg1Xs7Vog',
+    authDomain: 'neocratia-col-qa.firebaseapp.com',
+    databaseURL: 'https://neocratia-col-qa.firebaseio.com',
+    projectId: 'neocratia-col-qa',
+    storageBucket: 'neocratia-col-qa.appspot.com',
+    messagingSenderId: '1071663677378',
+    appId: '1:1071663677378:web:2ae52737d742af44c8e05b',
+    measurementId: 'G-Q1B3JWD2KD'
   }
 };
 

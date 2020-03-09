@@ -6,8 +6,37 @@
     "ng": "ng",
     "nx": "nx",
     "start": "ng serve",
-    "build": "ng build",
+    "start:api": "ng serve --project api",
+    "start:neocratium": "ng serve --port 8400",
+    "start:trabajen-vagos": "ng serve --project colombia-trabajen-vagos",
+    "build": "npm run build:functions && npm run build:col",
     "build:functions": "cd functions && npm i && npm run build && cd ..",
+
+    "build:col": "npm run build:col:trabajen-vagos && npm run build:neocratium",
+    "build:neocratium": "ng build --project neocratium",
+    "build:col:trabajen-vagos": "ng build --project colombia-trabajen-vagos",
+
+    "build:col:qa": "npm run build:col:trabajen-vagos:qa && build:neocratium:qa",
+    "build:col:trabajen-vagos:qa": "ng build --project colombia-trabajen-vagos --configuration=qa",
+    "build:neocratium:qa": "ng build --project neocratium --configuration=qa",
+
+    "build:col:prod": "npm run build:col:trabajen-vagos:prod && build:neocratium:prod",
+    "build:col:trabajen-vagos:prod": "ng build --project colombia-trabajen-vagos --prod",
+    "build:neocratium:prod": "ng build --project neocratium --prod",
+
+
+    "deploy:col": "npm run build:col && firebase use col-dev && npm run deploy:col:trabajen-vagos && npm run deploy:col:neocratium",
+    "deploy:col:trabajen-vagos": "firebase deploy --only hosting:colombia-trabajen-vagos",
+    "deploy:col:neocratium": "firebase deploy --only hosting:neocratium",
+
+    "deploy:col:qa": "npm run build:col:qa && firebase use col-qa && npm run deploy:col:trabajen-vagos:qa && npm run deploy:col:neocratium:qa",
+    "deploy:col:trabajen-vagos:qa": "firebase use col-qa && npm run build:col:trabajen-vagos:qa && firebase deploy --only hosting:colombia-trabajen-vagos",
+    "deploy:col:neocratium:qa": "firebase use col-qa && npm run build:neocratium:qa && firebase deploy --only hosting:neocratium",
+
+    "deploy:col:prod": "npm run build:col:prod && firebase use col-prod && npm run deploy:col:trabajen-vagos:prod && npm run deploy:col:neocratium:prod",
+    "deploy:col:trabajen-vagos:prod": "firebase deploy --only hosting:colombia-trabajen-vagos",
+    "deploy:col:neocratium:prod": "firebase deploy --only hosting:neocratium",
+
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",

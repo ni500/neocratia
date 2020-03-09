@@ -32,6 +32,14 @@
             "scripts": []
           },
           "configurations": {
+            "qa": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/neocratium/src/environments/environment.ts",
+                  "with": "apps/neocratium/src/environments/environment.staging.ts"
+                }
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {

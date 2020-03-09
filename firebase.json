@@ -12,17 +12,6 @@
   },
   "hosting": [
     {
-      "target": "honduras-ng-honduras",
-      "public": "dist/apps/honduras/ng-honduras",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ]
-    },
-    {
       "target": "colombia-trabajen-vagos",
       "public": "dist/apps/colombia/trabajen-vagos",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
@@ -36,6 +25,17 @@
     {
       "target": "neocratium",
       "public": "dist/apps/neocratium",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "target": "honduras-ng-honduras",
+      "public": "dist/apps/honduras/ng-honduras",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "rewrites": [
         {

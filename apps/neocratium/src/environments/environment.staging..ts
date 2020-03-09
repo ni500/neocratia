@@ -11,8 +11,8 @@ export const environment = {
     projectId: "neocratia-col-dev",
     storageBucket: "neocratia-col-dev.appspot.com",
     messagingSenderId: "889614190929",
-    appId: "1:889614190929:web:ede0b2b50bcd74e34beb70",
-    measurementId: "G-BCT14FBXFL"
+    appId: "1:889614190929:web:332fb690f7844c464beb70",
+    measurementId: "G-3D1LEYSQB9"
   }
 };
 
