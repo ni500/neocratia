@@ -24,6 +24,13 @@
       ],
       "@neocratia/colombia/feature-politicos": [
         "libs/colombia/feature-politicos/src/index.ts"
+      ],
+      "@neocratia/shared/ui-material": ["libs/shared/ui-material/src/index.ts"],
+      "@neocratia/shared/data-politicians": [
+        "libs/shared/data-politicians/src/index.ts"
+      ],
+      "@neocratia/shared/ui-politicians": [
+        "libs/shared/ui-politicians/src/index.ts"
       ]
     }
   },

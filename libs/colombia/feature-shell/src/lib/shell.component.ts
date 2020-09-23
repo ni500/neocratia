@@ -10,8 +10,12 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class ShellComponent {
   menuItems = [
-    { name: 'Menu 1', link: '/' },
-    { name: 'Menu 2', link: '/colombia-feature-politicos' }
+    { name: 'Congreso', link: '/congreso' },
+    { name: 'Senado', link: '/senado' },
+    { name: 'Gobierno', link: '/gobierno' },
+    { name: 'Otros Políticos', link: '/otros-politicos' },
+    { name: 'Crear Político', link: '/crear-politico' },
+    { name: 'Inicio', link: '/' }
   ];
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)

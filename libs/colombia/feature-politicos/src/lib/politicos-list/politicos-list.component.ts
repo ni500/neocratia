@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./politicos-list.component.scss']
 })
 export class PoliticosListComponent implements OnInit {
+  politicians = [
+    {
+      id: '1',
+      info: { name: 'Nicolás Contreras', email: 'nicolas@pappcorn.com ' }
+    }
+  ];
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

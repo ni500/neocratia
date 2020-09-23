@@ -634,6 +634,105 @@
           "styleext": "scss"
         }
       }
+    },
+    "shared-ui-material": {
+      "projectType": "library",
+      "root": "libs/shared/ui-material",
+      "sourceRoot": "libs/shared/ui-material/src",
+      "prefix": "neocratia",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/ui-material/tsconfig.lib.json",
+              "libs/shared/ui-material/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/ui-material/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/ui-material/jest.config.js",
+            "tsConfig": "libs/shared/ui-material/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/shared/ui-material/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "shared-data-politicians": {
+      "projectType": "library",
+      "root": "libs/shared/data-politicians",
+      "sourceRoot": "libs/shared/data-politicians/src",
+      "prefix": "neocratia",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/data-politicians/tsconfig.lib.json",
+              "libs/shared/data-politicians/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/data-politicians/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/data-politicians/jest.config.js",
+            "tsConfig": "libs/shared/data-politicians/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/shared/data-politicians/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "shared-ui-politicians": {
+      "projectType": "library",
+      "root": "libs/shared/ui-politicians",
+      "sourceRoot": "libs/shared/ui-politicians/src",
+      "prefix": "neocratia",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/ui-politicians/tsconfig.lib.json",
+              "libs/shared/ui-politicians/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/ui-politicians/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/ui-politicians/jest.config.js",
+            "tsConfig": "libs/shared/ui-politicians/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/shared/ui-politicians/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

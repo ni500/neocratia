@@ -49,6 +49,15 @@
     },
     "colombia-feature-politicos": {
       "tags": []
+    },
+    "shared-ui-material": {
+      "tags": []
+    },
+    "shared-data-politicians": {
+      "tags": []
+    },
+    "shared-ui-politicians": {
+      "tags": []
     }
   }
 }

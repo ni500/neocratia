@@ -4,8 +4,6 @@
     "col-dev": "neocratia-col-dev",
     "col-qa": "neocratia-col-qa",
     "col-prod": "neocratia-col-prod"
-
-    Proyectos en Firebase con sus alias en el monorepo
   },
   "targets": {
     "neocratia-col-dev": {
@@ -33,7 +31,7 @@
         "colombia-trabajen-vagos": [
           "trabajen-vagos"
         ],
-         "neocratium": [
+        "neocratium": [
           "neocratium"
         ]
       }
